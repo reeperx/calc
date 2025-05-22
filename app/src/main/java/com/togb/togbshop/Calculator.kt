@@ -35,7 +35,7 @@ fun Calculator() {
     var number2 by remember { mutableStateOf("") }
 
 
-    var results by remember { mutableStateOf("") }
+    var result by remember { mutableStateOf("") }
 
     Box(
         modifier = Modifier
@@ -78,7 +78,7 @@ fun Calculator() {
 
             // Results Field
             TextField(
-                value = results,
+                value = result,
                 onValueChange = {
 
                 },
@@ -97,7 +97,7 @@ fun Calculator() {
             ) {
                 Button(
                     onClick = {
-                        results = (number1.toDouble() + number2.toDouble()).toString()
+                        result = (number1.toDouble() + number2.toDouble()).toString()
                     },
                     modifier = Modifier
                         .padding(8.dp),
@@ -107,7 +107,7 @@ fun Calculator() {
                 }
                 Button(
                     onClick = {
-                        results = (number1.toDouble() - number2.toDouble()).toString()
+                        result = (number1.toDouble() - number2.toDouble()).toString()
                     },
                     modifier = Modifier
                         .padding(8.dp),
@@ -117,7 +117,7 @@ fun Calculator() {
                 }
                 Button(
                     onClick = {
-                        results = (number1.toDouble() / number2.toDouble()).toString()
+                        result = (number1.toDouble() / number2.toDouble()).toString()
                     },
                     modifier = Modifier
                         .padding(8.dp),
@@ -127,7 +127,7 @@ fun Calculator() {
                 }
                 Button(
                     onClick = {
-                        results = (number1.toDouble() * number2.toDouble()).toString()
+                        result = (number1.toDouble() * number2.toDouble()).toString()
                     },
                     modifier = Modifier
                         .padding(8.dp),
@@ -139,7 +139,7 @@ fun Calculator() {
                     onClick = {
                         number1=""
                         number2=""
-                        results=""
+                        result=""
                     },
                     modifier = Modifier
                         .padding(8.dp),
